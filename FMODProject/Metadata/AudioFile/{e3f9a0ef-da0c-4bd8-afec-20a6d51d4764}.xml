@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{e3f9a0ef-da0c-4bd8-afec-20a6d51d4764}">
+		<property name="assetPath">
+			<value>06 - Moleculeprod - ACID TraveL.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>325.51183673469387</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{06f94ed5-7ea7-40fe-8c24-a70c17e66de0}</destination>
+		</relationship>
+	</object>
+</objects>
