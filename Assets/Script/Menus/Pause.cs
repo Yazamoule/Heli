@@ -25,6 +25,7 @@ public class Pause : MonoBehaviour
         else
         {
             gm.StopTime(true);
+            gm.SetMouseVisible(true);
 
             if (gm.m_playerInpuActions != null)
                 gm.m_playerInpuActions.SwitchCurrentActionMap("UI");
@@ -36,6 +37,7 @@ public class Pause : MonoBehaviour
     public void Resume()
     {
         gm.StopTime(false);
+        gm.SetMouseVisible(false);
 
         if (gm.m_playerInpuActions != null)
             gm.m_playerInpuActions.SwitchCurrentActionMap("Player");
@@ -46,6 +48,7 @@ public class Pause : MonoBehaviour
     public void QuitToMenu()
     {
         gm.StopTime(false);
+        gm.SetMouseVisible(true);
 
         if (gm.m_playerInpuActions != null)
             gm.m_playerInpuActions.SwitchCurrentActionMap("UI");

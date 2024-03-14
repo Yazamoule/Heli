@@ -20,6 +20,8 @@ public class Menu : MonoBehaviour
     {
         gm = GameManager.Instance;
 
+        gm.SetMouseVisible(true);
+
         if (gm.m_playerInpuActions != null)
             gm.m_playerInpuActions.SwitchCurrentActionMap("UI");
     }
@@ -33,6 +35,7 @@ public class Menu : MonoBehaviour
     public void Play()
     {
         gm.LoadScene(m_playButonSceneName);
+        gm.SetMouseVisible(false);
     }
 
     //TODO fare le meme system de bouton que soundMenu

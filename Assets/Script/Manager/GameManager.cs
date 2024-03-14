@@ -143,4 +143,18 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public void SetMouseVisible(bool _visible)
+    {
+        if (_visible)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
 }
