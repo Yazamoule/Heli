@@ -87,6 +87,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4e2bf099-9b92-4572-9a4a-a80687e82531",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Roll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "f3b09dff-0a97-4b5b-8a80-ec7575256d39",
                     "path": "<Joystick>/stick/x",
                     "interactions": "",
@@ -95,6 +106,39 @@
                     "action": "Yaw",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "d205aac3-e529-4a36-91de-d337a3ad01a9",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Yaw",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "84ddcef5-4974-48a1-a5b9-5fe01c52dd93",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Yaw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "39fce660-483b-4c13-89cd-58188dac70d1",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Yaw",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -109,6 +153,17 @@
                 },
                 {
                     "name": "",
+                    "id": "6954dfaf-c5c4-494c-bd97-940aa1460d8b",
+                    "path": "<Mouse>/delta/y",
+                    "interactions": "",
+                    "processors": "Invert",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3c022768-833a-4639-aa20-59e9b7250f88",
                     "path": "<HID::STMicroelectronics BETAFPV Joystick>/rx",
                     "interactions": "",
@@ -117,6 +172,39 @@
                     "action": "Throtle",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "47fe2462-dc1b-42bf-a2b1-b0800ecf1d7f",
+                    "path": "1DAxis(minValue=0)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throtle",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "cc9afe45-a29b-4916-882a-608cd3d3b014",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throtle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "3529877e-b53c-4836-be52-89013a2ef7ac",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Throtle",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
