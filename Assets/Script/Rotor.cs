@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.InputSystem.Controls;
 
 public class Rotor : MonoBehaviour
 {
@@ -14,22 +14,22 @@ public class Rotor : MonoBehaviour
 
     [SerializeField] Transform rotorShaft;
 
+    float angleBetweenBlades;
+    float bladeAngle;
+    float spacing;
+
     void Start()
     {
-
+        angleBetweenBlades = 360 / blades;
+        bladeAngle = 0f;
+        spacing = bladeLength / (subdivision - 1);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float angleBetweenBlades = 360 / blades;
-        float bladeAngle = 0f;
-        float spacing = bladeLength / (subdivision - 1);
-
-
-        // Example usage:
+        bladeAngle = 0f;
         Vector3 originalVector = rotorShaft.forward;
         Vector3 axisOfRotation = rotorShaft.up; // Rotate around the y-axis
-
 
         for (int j = 0; j < blades; j++)
         {
@@ -38,14 +38,23 @@ public class Rotor : MonoBehaviour
             // Create a rotation quaternion
             Quaternion rotation = Quaternion.AngleAxis(bladeAngle, axisOfRotation);
             Vector3 directionOfBlade = rotation * originalVector;
+            Debug.DrawRay(rotorShaft.position, directionOfBlade * bladeLength, Color.green);
 
             for (int i = 0; i < subdivision; i++)
             {
                 Vector3 pointPosition = rotorShaft.position + directionOfBlade * spacing * i;
-                Debug.DrawRay(pointPosition, rotorShaft.up * 0.1f, Color.blue); // Changez Vector3.up en la direction que vous souhaitez afficher le point
+                float distanceFromCenter = Vector3.Distance(pointPosition, rotorShaft.position);
+                Debug.DrawRay(pointPosition, rotorShaft.up * GetLift(distanceFromCenter), Color.blue);
             }
-
-
         }
+    }
+
+    private float GetLift(float distanceFromCenter)
+    {
+        float area = (bladeLength / subdivision) * bladeWidth;
+        float angularVelocity = (2 * Mathf.PI * (rpm / 60)) * distanceFromCenter;
+        float lift = liftCoefficient * airDensity * area * (angularVelocity * angularVelocity) * Time.deltaTime;
+
+        return lift;
     }
 }

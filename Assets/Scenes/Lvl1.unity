@@ -366,11 +366,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 195392, guid: a85feef60c5e675428276a080c95062c, type: 3}
   m_PrefabInstance: {fileID: 1987138907}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &479670650 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2389693791412455889, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
-  m_PrefabInstance: {fileID: 1029388040480430802}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &697947476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,37 +916,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!1 &1190711471
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1190711472}
-  m_Layer: 0
-  m_Name: RotorShaft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1190711472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190711471}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.315, y: 0.912, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1029388040480430810}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1323592274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1705,6 +1669,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2084668595931614361, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084668595931614361, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2084668595931614361, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2389693791412455889, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
       propertyPath: m_Name
       value: Heli
@@ -1749,53 +1725,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: rpm
+      value: 3600
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: blades
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: subdivision
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: liftCoefficient
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5863962780865491552, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1190711472}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2389693791412455889, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1029388040480430811}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
 --- !u!114 &1029388040480430807 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4665656030761288144, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
   m_PrefabInstance: {fileID: 1029388040480430802}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479670650}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6408dc5f6f8841f4e980a857f4450254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1029388040480430810 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5863962780865491552, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
-  m_PrefabInstance: {fileID: 1029388040480430802}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1029388040480430811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479670650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138e92ab025995b4096d12b98cbd8d4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blades: 5
-  subdivision: 10
-  bladeLength: 1.7
-  bladeWidth: 0.2
-  rpm: 0
-  airDensity: 1.225
-  liftCoefficient: 0.5
-  rotorShaft: {fileID: 1190711472}
 --- !u!1001 &8729305950614283589
 PrefabInstance:
   m_ObjectHideFlags: 0

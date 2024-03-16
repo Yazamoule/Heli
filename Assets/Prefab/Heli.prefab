@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5863962780865491552}
   - component: {fileID: 4665656030761288144}
+  - component: {fileID: 6734896414050459165}
   - component: {fileID: 8528775386517537174}
   - component: {fileID: 5724142029570925287}
   m_Layer: 0
@@ -34,6 +35,7 @@ Transform:
   m_Children:
   - {fileID: 7972379959181619260}
   - {fileID: 8823541937251073029}
+  - {fileID: 2084668595931614361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4665656030761288144
@@ -52,6 +54,26 @@ MonoBehaviour:
   m_speedYaw: 97
   m_speedPitch: 75
   m_speedRoll: 82
+--- !u!114 &6734896414050459165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2389693791412455889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138e92ab025995b4096d12b98cbd8d4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blades: 5
+  subdivision: 10
+  bladeLength: 1.7
+  bladeWidth: 0.2
+  rpm: 0
+  airDensity: 1.225
+  liftCoefficient: 0.5
+  rotorShaft: {fileID: 2084668595931614361}
 --- !u!54 &8528775386517537174
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -100,6 +122,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6787124, y: 0.97283614, z: 1.0013207}
   m_Center: {x: 0.33935618, y: 0.013581902, z: -0.039244488}
+--- !u!1 &2670869712058906286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084668595931614361}
+  m_Layer: 0
+  m_Name: RotorShaft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084668595931614361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2670869712058906286}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.315, y: 0.912, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5863962780865491552}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4394158691998417293
 GameObject:
   m_ObjectHideFlags: 0
