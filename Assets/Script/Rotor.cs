@@ -7,6 +7,8 @@ public class Rotor : MonoBehaviour
     [SerializeField] int subdivision;
     [SerializeField] float bladeLength;
     [SerializeField] float bladeWidth;
+    [SerializeField] float bladeThickness; 
+    [SerializeField] float bladeDensity = 2000f; // kg/m^3
     [SerializeField] float rpm;
 
     [SerializeField] float airDensity = 1.225f; // kg/m^3
@@ -28,6 +30,7 @@ public class Rotor : MonoBehaviour
     void FixedUpdate()
     {
         bladeAngle = 0f;
+
         Vector3 originalVector = rotorShaft.forward;
         Vector3 axisOfRotation = rotorShaft.up; // Rotate around the y-axis
 
@@ -44,7 +47,7 @@ public class Rotor : MonoBehaviour
             {
                 Vector3 pointPosition = rotorShaft.position + directionOfBlade * spacing * i;
                 float distanceFromCenter = Vector3.Distance(pointPosition, rotorShaft.position);
-                Debug.DrawRay(pointPosition, rotorShaft.up * GetLift(distanceFromCenter), Color.blue);
+                Debug.DrawRay(pointPosition, rotorShaft.up * GetLift(distanceFromCenter) * Time.deltaTime, Color.blue) ;
             }
         }
     }
@@ -52,9 +55,24 @@ public class Rotor : MonoBehaviour
     private float GetLift(float distanceFromCenter)
     {
         float area = (bladeLength / subdivision) * bladeWidth;
+        float volume = bladeLength * bladeWidth * bladeThickness;
+        float mass = GetWeight(volume,bladeDensity);
+
         float angularVelocity = (2 * Mathf.PI * (rpm / 60)) * distanceFromCenter;
-        float lift = liftCoefficient * airDensity * area * (angularVelocity * angularVelocity) * Time.deltaTime;
+        float lift = liftCoefficient * airDensity * area * (angularVelocity * angularVelocity);
 
         return lift;
+    }
+
+    void OnYaw()
+    {
+
+    }
+
+    public float GetWeight(float volume, float density)
+    {
+        float gravity = 9.81f;
+        float weight = volume * density * gravity;
+        return weight;
     }
 }

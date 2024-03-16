@@ -1738,6 +1738,14 @@ PrefabInstance:
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: bladeDensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: bladeThickness
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
       propertyPath: liftCoefficient
       value: 0.2
       objectReference: {fileID: 0}
