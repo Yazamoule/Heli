@@ -8,10 +8,10 @@ public class Heli : MonoBehaviour
 
     #region declaration
     
-    float m_throtle = 0f;
-    float m_yaw = 0f;
-    float m_pitch = 0f;
-    float m_roll = 0f;
+    public float m_throtle = 0f;
+    public float m_yaw = 0f;
+    public float m_pitch = 0f;
+    public float m_roll = 0f;
 
     [SerializeField, Range(0f, 2000f)] float m_speedThrotle;
     [SerializeField, Range(0f, 200f)] float m_speedYaw;

@@ -1734,6 +1734,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734896414050459165, guid: c3f84ba66e5eda64db39336f669ee4ae, type: 3}
       propertyPath: subdivision
       value: 21
       objectReference: {fileID: 0}

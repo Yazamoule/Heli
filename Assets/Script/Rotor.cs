@@ -20,8 +20,10 @@ public class Rotor : MonoBehaviour
     float bladeAngle;
     float spacing;
 
-    public float pitch = 0f;
-    public float roll = 0f;
+    public float m_throtle = 0f;
+    public float m_yaw = 0f;
+    public float m_pitch = 0f;
+    public float m_roll = 0f;
 
     void Start()
     {
@@ -81,31 +83,40 @@ public class Rotor : MonoBehaviour
     {
         Quaternion rotationPitchPlus = Quaternion.AngleAxis(0f, rotorShaft.up);
         Vector3 directionPitchPlus = rotationPitchPlus * rotorShaft.forward;
-        Debug.DrawRay(rotorShaft.position, directionPitchPlus * pitch, Color.green) ;
+        Debug.DrawRay(rotorShaft.position, directionPitchPlus * m_pitch, Color.green) ;
 
         Quaternion rotationPitchMinus = Quaternion.AngleAxis(180f, rotorShaft.up);
         Vector3 directionPitchMinus = rotationPitchMinus * rotorShaft.forward;
-        Debug.DrawRay(rotorShaft.position, directionPitchMinus * pitch, Color.yellow);
+        Debug.DrawRay(rotorShaft.position, directionPitchMinus * m_pitch, Color.yellow);
 
         Quaternion rotationRollPlus = Quaternion.AngleAxis(90f, rotorShaft.up);
         Vector3 directionRollPlus = rotationRollPlus * rotorShaft.forward;
-        Debug.DrawRay(rotorShaft.position, directionRollPlus * roll, Color.red);
+        Debug.DrawRay(rotorShaft.position, directionRollPlus * m_roll, Color.red);
 
         Quaternion rotationRollMinus = Quaternion.AngleAxis(270f, rotorShaft.up);
         Vector3 directionRollMinus = rotationRollMinus * rotorShaft.forward;
-        Debug.DrawRay(rotorShaft.position, directionRollMinus * roll, Color.blue);
+        Debug.DrawRay(rotorShaft.position, directionRollMinus * m_roll, Color.blue);
 
     }
     #region input
+    public void OnThrotle(InputAction.CallbackContext context)
+    {
+        m_throtle = context.ReadValue<float>();
+    }
+
+    public void OnYaw(InputAction.CallbackContext context)
+    {
+        m_yaw = context.ReadValue<float>();
+    }
 
     public void OnPitch(InputAction.CallbackContext context)
     {
-        pitch = context.ReadValue<float>();
+        m_pitch = context.ReadValue<float>();
     }
 
     public void OnRoll(InputAction.CallbackContext context)
     {
-        roll = context.ReadValue<float>();
+        m_roll = context.ReadValue<float>();
     }
     #endregion
 }
